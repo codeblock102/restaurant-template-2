@@ -6,11 +6,11 @@ import { renderOrderSummary } from './components/OrderSummary';
 import { menuItems } from './data/menu-items';
 import { customizationOptions } from './data/customization-options';
 import { updateCart, updateOrderSummary } from './utils/cart';
-import { setupMobileMenu } from './utils/navigation';
+import { setupMobileMenu,initializeNavigation } from './utils/navigation';
 
 // Call the render function when the page loads
 renderOrderPage();
-
+initializeNavigation();
 function renderOrderPage() {
   const app = document.querySelector('#app');
   app.innerHTML = `

@@ -1,5 +1,7 @@
+import { setupMobileMenu, initializeNavigation } from '../utils/navigation.js';
+
 export function renderNavigation() {
-  return `
+  const navigationHTML = `
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
       <div class=" mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -25,7 +27,7 @@ export function renderNavigation() {
         </div>
 
         <!-- Mobile menu panel -->
-        <div class="mobile-menu hidden md:hidden">
+        <div class="mobile-menu hidden md:hidden transform transition-all duration-300 ease-in-out opacity-0 scale-95">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <a href="/" class="nav-link block px-3 py-2">Home</a>
             <a href="#menu" class="nav-link block px-3 py-2">Menu</a>
@@ -36,4 +38,11 @@ export function renderNavigation() {
       </div>
     </nav>
   `;
+  
+  // Initialize navigation after rendering
+  setTimeout(() => {
+    initializeNavigation();
+  }, 0);
+  
+  return navigationHTML;
 }
