@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-natural text-gray-800;
+}
+
+.nav-link {
+  @apply text-gray-700 hover:text-primary transition-colors duration-200 font-medium;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-light transition-colors duration-200;
+}
+
+.btn-sm {
+  @apply px-4 py-2 text-sm;
+}
+
+.section-title {
+  @apply font-display text-3xl md:text-4xl text-primary;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.01];
+}
+
+/* Form elements */
+.form-select {
+  @apply block w-full rounded-md border-gray-300 shadow-sm 
+    focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50;
+}
+
+/* Container width adjustments */
+.max-w-7xl {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1280px;
+}
+
+/* Navigation adjustments */
+nav {
+  @apply bg-white/90 backdrop-blur-sm;
+}
+
+nav .max-w-7xl {
+  @apply h-full;
+}
+
+/* Order page specific styles */
+.order-summary {
+  @apply sticky top-24 bg-white rounded-lg shadow-md p-4;
+}
