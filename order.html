@@ -1,127 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order - Fresh Food</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="bg-white fixed w-full z-20 top-0 shadow-sm">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="flex justify-between items-center h-16">
-                    <a href="/" class="text-xl font-bold text-primary">Fresh Food</a>
-                    <div class="hidden md:flex space-x-8">
-                        <a href="/" class="text-gray-600 hover:text-primary">Home</a>
-                        <a href="/#menu" class="text-gray-600 hover:text-primary">Menu</a>
-                        <a href="/#features" class="text-gray-600 hover:text-primary">Features</a>
-                        <a href="/order" class="text-primary font-medium">Order Now</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <main>
-            <section class="pt-24 pb-16 px-4">
-                <div class="max-w-7xl mx-auto">
-                    <div data-aos="fade-up">
-                        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl text-primary mb-6">Place Your Order</h1>
-                        <div class="bg-white rounded-lg shadow-md p-6 max-w-2xl">
-                            <form class="space-y-6">
-                                <div>
-                                    <label for="name" class="block text-gray-700 mb-2">Full Name</label>
-                                    <input type="text" id="name" name="name" required
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                                </div>
-                                
-                                <div>
-                                    <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                                    <input type="email" id="email" name="email" required
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                                </div>
-
-                                <div>
-                                    <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" required
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                                </div>
-
-                                <div>
-                                    <label for="meal" class="block text-gray-700 mb-2">Select Meal</label>
-                                    <select id="meal" name="meal" required
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                                        <option value="">Choose a meal...</option>
-                                        <option value="meal1">Grilled Chicken Salad</option>
-                                        <option value="meal2">Vegetarian Buddha Bowl</option>
-                                        <option value="meal3">Salmon with Quinoa</option>
-                                        <option value="meal4">Mediterranean Plate</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label for="notes" class="block text-gray-700 mb-2">Special Instructions</label>
-                                    <textarea id="notes" name="notes" rows="4"
-                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
-                                </div>
-
-                                <button type="submit" 
-                                    class="btn-primary w-full">
-                                    Place Order
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-gray-900 text-white py-12">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Fresh Food</h3>
-                        <p class="text-gray-400">Delicious, nutritious meals made with organic ingredients.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold mb-4">Quick Links</h4>
-                        <ul class="space-y-2">
-                            <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
-                            <li><a href="/#menu" class="text-gray-400 hover:text-white">Menu</a></li>
-                            <li><a href="/#features" class="text-gray-400 hover:text-white">Features</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold mb-4">Contact</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>123 Food Street</li>
-                            <li>Foodtown, FT 12345</li>
-                            <li>contact@freshfood.com</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold mb-4">Hours</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>Mon-Fri: 8am - 8pm</li>
-                            <li>Saturday: 9am - 7pm</li>
-                            <li>Sunday: 9am - 6pm</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mt-8 pt-8 border-t border-gray-800">
-                    <p class="text-gray-400">&copy; 2024 Fresh Food. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Online | Fresh & Natural</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/order.js"></script>
+  </body>
 </html>
