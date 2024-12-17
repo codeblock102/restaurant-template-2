@@ -11,7 +11,7 @@ export function renderHero() {
               Delicious, nutritious meals made with organic ingredients.
               Fast service without compromising quality.
             </p>
-            <a href="/order.html" class="btn-primary inline-block text-center">Start Your Order</a>
+            <a href="/order" class="btn-primary inline-block text-center">Start Your Order</a>
           </div>
           <div data-aos="fade-left" class="relative">
             <img 
