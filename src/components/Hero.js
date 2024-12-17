@@ -11,13 +11,13 @@ export function renderHero() {
               Delicious, nutritious meals made with organic ingredients.
               Fast service without compromising quality.
             </p>
-            <a href="#" onclick="handleOrder(event)" class="btn-primary inline-block text-center">Start Your Order</a>
+            <a href="/order.html" class="btn-primary inline-block text-center">Start Your Order</a>
           </div>
           <div data-aos="fade-left" class="relative">
             <img 
               src="https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=800"
               alt="Fresh ingredients"
-              class="rounded-2xl shadow-2xl w-full h-auto md:max-w-2xl lg:max-w-3xl mx-auto"
+              class="rounded-2xl shadow-2xl w-full h-auto md:max-w-lg lg:max-w-xl mx-auto"
             >
           </div>
         </div>

@@ -14,19 +14,6 @@ AOS.init({
   once: true,
 });
 
-window.handleOrder = (e) => {
-  e.preventDefault();
-  // Clear current content
-  document.querySelector('main').innerHTML = `
-    <section class="pt-24 pb-16 px-4">
-      <div class="max-w-7xl mx-auto">
-        <h1 class="font-display text-4xl md:text-5xl text-primary mb-6">Place Your Order</h1>
-        <!-- Add your order form or content here -->
-      </div>
-    </section>
-  `;
-};
-
 document.querySelector('#app').innerHTML = `
   ${renderNavigation()}
   <main>
