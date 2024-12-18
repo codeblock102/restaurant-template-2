@@ -6,7 +6,7 @@ export function renderCallToAction() {
         <p class="text-lg mb-8 text-natural">
           Fresh, delicious meals are just a few clicks away.
         </p>
-        <a href="#" onclick="handleOrderClick(event)" class="bg-accent hover:bg-accent-light text-white px-8 py-4 rounded-lg inline-block transition-colors duration-200">
+        <a href="order.html" class="bg-accent hover:bg-accent-light text-white px-8 py-4 rounded-lg inline-block transition-colors duration-200">
           Order Online
         </a>
       </div>
