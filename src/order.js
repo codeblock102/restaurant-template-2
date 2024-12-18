@@ -8,8 +8,10 @@ import { customizationOptions } from './data/customization-options';
 import { updateCart, updateOrderSummary } from './utils/cart';
 import { setupMobileMenu,initializeNavigation } from './utils/navigation';
 
-// Make renderOrderPage available globally or export it
-export function renderOrderPage() {
+// Call the render function when the page loads
+renderOrderPage();
+initializeNavigation();
+function renderOrderPage() {
   const app = document.querySelector('#app');
   app.innerHTML = `
     ${renderNavigation()}
@@ -36,12 +38,6 @@ export function renderOrderPage() {
 
   setupEventListeners();
   setupMobileMenu();
-}
-
-// Move these to only execute if this is the order page
-if (window.location.pathname === '/order') {
-  renderOrderPage();
-  initializeNavigation();
 }
 
 function setupEventListeners() {

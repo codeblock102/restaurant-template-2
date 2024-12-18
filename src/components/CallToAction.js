@@ -6,17 +6,10 @@ export function renderCallToAction() {
         <p class="text-lg mb-8 text-natural">
           Fresh, delicious meals are just a few clicks away.
         </p>
-        <a href="/order" class="bg-accent hover:bg-accent-light text-white px-8 py-4 rounded-lg inline-block transition-colors duration-200" onclick="handleOrderClick(event)">
+        <a href="/order.html" class="bg-accent hover:bg-accent-light text-white px-8 py-4 rounded-lg inline-block transition-colors duration-200">
           Order Online
         </a>
       </div>
     </section>
   `;
-}
-
-export function handleOrderClick(event) {
-  event.preventDefault();
-  const app = document.querySelector('#app');
-  renderOrderPage();
-  history.pushState({}, '', '/order');
 }
