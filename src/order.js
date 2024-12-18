@@ -8,10 +8,8 @@ import { customizationOptions } from './data/customization-options';
 import { updateCart, updateOrderSummary } from './utils/cart';
 import { setupMobileMenu,initializeNavigation } from './utils/navigation';
 
-// Call the render function when the page loads
-renderOrderPage();
-initializeNavigation();
-function renderOrderPage() {
+// Export the function
+export function renderOrderPage() {
   const app = document.querySelector('#app');
   app.innerHTML = `
     ${renderNavigation()}
@@ -40,6 +38,7 @@ function renderOrderPage() {
   setupMobileMenu();
 }
 
+// Move these to a separate initialization block
 function setupEventListeners() {
   // Add to cart functionality
   window.addToCart = (itemId) => {
@@ -63,4 +62,10 @@ function setupEventListeners() {
     updateCart(item, customizations, totalPrice);
     updateOrderSummary();
   };
+}
+
+// Only run this if this is the entry point
+if (window.location.pathname === '/order') {
+  renderOrderPage();
+  initializeNavigation();
 }

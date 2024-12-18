@@ -1,4 +1,5 @@
 import { setupMobileMenu, initializeNavigation } from '../utils/navigation.js';
+import { renderOrderPage } from '../order.js';
 
 export function renderNavigation() {
   const navigationHTML = `
@@ -22,7 +23,7 @@ export function renderNavigation() {
           <div class="hidden md:flex md:items-center md:space-x-12">
             <a href="/" class="nav-link">Home</a>
             <a href="#menu" class="nav-link">Menu</a>
-            <a href="/order.html" class="btn-primary">Order Now</a>
+            <a href="/order" class="btn-primary" onclick="window.handleOrderNav(event)">Order Now</a>
           </div>
         </div>
 
@@ -31,13 +32,19 @@ export function renderNavigation() {
           <div class="px-2 pt-2 pb-3 space-y-1">
             <a href="/" class="nav-link block px-3 py-2">Home</a>
             <a href="#menu" class="nav-link block px-3 py-2">Menu</a>
-            <a href="#locations" class="nav-link block px-3 py-2">Locations</a>
-            <a href="/order.html" class="btn-primary block text-center mt-4">Order Now</a>
+            <a href="/order" class="btn-primary block text-center mt-4" onclick="window.handleOrderNav(event)">Order Now</a>
           </div>
         </div>
       </div>
     </nav>
   `;
+  
+  // Add the click handler to window
+  window.handleOrderNav = (event) => {
+    event.preventDefault();
+    history.pushState({}, '', '/order');
+    renderOrderPage();
+  };
   
   // Initialize navigation after rendering
   setTimeout(() => {
